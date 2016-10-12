@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+	
 	<title>Document</title>
 	<link rel="stylesheet" href="./index.css">
 </head>
 <body>
-	<div class="red">Hello</div><span id="dateTime"></span>
+	<div class="red">张振国Hello</div><span id="dateTime"></span>
 
 	<img src="./404.jpg" alt="">
-
+	<!-- 第三方组件 mime 设置了响应头信息， 视频可以播放了 -->
+	<video width="320" height="240" controls="controls" autoplay="autoplay">
+		  <source src="./movie.ogg" type="video/ogg" />
+		  <source src="./movie.mp4" type="video/mp4" />
+		  <source src="./movie.webm" type="video/webm" />
+		  <object data="./movie.mp4" width="320" height="240">
+		    <embed width="320" height="240" src="/i/movie.swf" />
+		  </object>
+	</video>
 </body>
 </html>
-<script>
-	
-		var xhr = new XMLHttpRequest;
-		xhr.open('GET','/data',true)
-		xhr.onreadystatechange = function(){
-			if(xhr.readyState == 4 ){
-				consolel.log(11)
-			}
-		}
-		xhr.open();
-	
-</script>
+<script src="./index.js"></script>
